@@ -21,6 +21,8 @@ const Home = ({ setContent }) => {
         skills: ''
     });
 
+        
+
     const onChange = event => {
         setForm({
             ...form,
@@ -66,42 +68,42 @@ const Home = ({ setContent }) => {
                 </Field>
 
                 <Field>
-                    <Label>Recipient<span style={{ color: 'red' }}>*</span></Label>
+                    <Label>Recipient</Label>
                     <Control>
-                        <Textarea name='recipient' color='primary' className='is-size-5-tablet' value={form.recipient} onChange={onChange} />
+                        <Input name='recipient' color='primary' className='is-size-5-tablet' value={form.recipient} onChange={onChange} />
                     </Control>
                 </Field>
                 
                 <Field>
-                    <Label>Recipient Address<span style={{ color: 'red' }}>*</span></Label>
+                    <Label>Recipient Address</Label>
                     <Control>
                         <Textarea name='recipientAddress' color='primary' className='is-size-5-tablet' value={form.recipientAddress} onChange={onChange} />
                     </Control>
                 </Field>
 
                 <Field>
-                    <Label>Subject<span style={{ color: 'red' }}>*</span></Label>
+                    <Label>Subject</Label>
                     <Control>
-                        <Textarea name='subject' color='primary' className='is-size-5-tablet' value={form.subject} onChange={onChange} />
+                        <Input name='subject' color='primary' className='is-size-5-tablet' value={form.subject} onChange={onChange} />
                     </Control>
                 </Field>
 
                 <Field>
-                    <Label>Date<span style={{ color: 'red' }}>*</span></Label>
+                    <Label>Date</Label>
                     <Control>
-                        <Textarea name='date' color='primary' className='is-size-5-tablet' value={form.date} onChange={onChange} />
+                        <Input name='date' color='primary' className='is-size-5-tablet' value={form.date} onChange={onChange} />
                     </Control>
                 </Field>
 
                 <Field>
-                    <Label>Interest<span style={{ color: 'red' }}>*</span></Label>
+                    <Label>Interest</Label>
                     <Control>
                         <Textarea name='interest' color='primary' className='is-size-5-tablet' value={form.interest} onChange={onChange} />
                     </Control>
                 </Field>
 
                 <Field>
-                    <Label>Skills<span style={{ color: 'red' }}>*</span></Label>
+                    <Label>Skills</Label>
                     <Control>
                         <Textarea name='skills' color='primary' className='is-size-5-tablet' value={form.skills} onChange={onChange} />
                     </Control>
