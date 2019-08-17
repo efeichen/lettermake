@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Container from 'react-bulma-components/lib/components/container';
 import Navbar from 'react-bulma-components/lib/components/navbar';
 import { Link } from 'react-router-dom';
-import logo from '../treadmill.svg';
+import logo from '../file-text.svg';
 
 const Header = () => {
     const [navbarActive, setNavbar] = useState(false);
