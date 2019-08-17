@@ -1,3 +1,11 @@
+# LetterMake
+
+Light-weight cover letter generator. Simply fill out contact information and descriptions of your interests and skills!
+
+Made with React & react-pdf.
+
+-----------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
