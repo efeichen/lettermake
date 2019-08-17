@@ -9,8 +9,8 @@ const Reader = ({ content }) => {
     return (
         <section>
             <Header></Header>
-            <Container fluid>
-                <PDFViewer width={612} height={792}>
+            <Container fluid style={{ margin: '20px 0 20px 0' }}>
+                <PDFViewer width={612} height={792} id='letter'>
                     <Template content={content}></Template>
                 </PDFViewer>
             </Container>
