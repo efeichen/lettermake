@@ -157,8 +157,15 @@ const Home = ({ setContent }) => {
                     </div>
                 </Field>
 
-                <Field kind='group'>
-                    <Button color='primary' className='is-size-5-tablet' onClick={handleSubmit} renderAs={Link} to='/reader'>Convert</Button>
+                <Field className='is-horizontal'>
+                    <Label className='field-label'></Label>
+                    <div className='field-body'>
+                        <Field>
+                            <Control>
+                                <Button color='primary' className='is-size-5-tablet' onClick={handleSubmit} renderAs={Link} to='/reader'>Convert</Button>
+                            </Control>
+                        </Field>
+                    </div>
                 </Field>
             </ArticleForm>
 
