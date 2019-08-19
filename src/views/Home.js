@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Hero from 'react-bulma-components/lib/components/hero';
 import Header from 'components/Header';
 import ArticleForm from 'components/Form';
@@ -21,8 +21,6 @@ const Home = ({ setContent }) => {
         skills: ''
     });
 
-        
-
     const onChange = event => {
         setForm({
             ...form,
@@ -31,7 +29,7 @@ const Home = ({ setContent }) => {
     };
 
     const handleSubmit = () => {
-        setContent(form);        
+        setContent(form);
     }
 
     return (
@@ -39,81 +37,131 @@ const Home = ({ setContent }) => {
             <Header></Header>
 
             <ArticleForm>
-                <Field>
-                    <Label>Full Name</Label>
-                    <Control>
-                        <Input name='author' color='primary' className='is-size-5-tablet' value={form.author} onChange={onChange} />
-                    </Control>
+                <Field className='is-horizontal'>
+                    <Label className='field-label'>Author</Label>
+                    <div className='field-body'>
+                        <Field>
+                            <Control>
+                                <Input placeholder='First Name' name='authorFirst' color='primary' value={form.authorFirst} onChange={onChange} />
+                            </Control>
+                        </Field>
+                        <Field>
+                            <Control>
+                                <Input placeholder='Last Name' name='authorLast' color='primary' value={form.authorLast} onChange={onChange} />
+                            </Control>
+                        </Field>
+                    </div>
+                </Field>
+                <Field className='is-horizontal'>
+                    <Label className='field-label'></Label>
+                    <div className='field-body'>
+                        <Field>
+                            <Control>
+                                <Input placeholder='Email' name='email' color='primary' value={form.email} onChange={onChange} />
+                            </Control>
+                        </Field>
+                    </div>
+                </Field>
+                <Field className='is-horizontal'>
+                    <Label className='field-label'></Label>
+                    <div className='field-body'>
+                        <Field>
+                            <Control>
+                                <Input placeholder='Address' name='email' color='primary' value={form.address} onChange={onChange} />
+                            </Control>
+                        </Field>
+                    </div>
+                </Field>
+                <Field className='is-horizontal'>
+                    <Label className='field-label'></Label>
+                    <div className='field-body'>
+                        <Field>
+                            <Control>
+                                <Input placeholder='Phone: (XXX) XXX-XXX' name='phone' color='primary' value={form.phone} onChange={onChange} />
+                            </Control>
+                        </Field>
+                    </div>
                 </Field>
 
-                <Field>
-                    <Label>Email Address</Label>
-                    <Control>
-                        <Input name='email' color='primary' className='is-size-5-tablet' value={form.email} onChange={onChange} />
-                    </Control>
+                <Field className='is-horizontal'>
+                    <Label className='field-label'>Recipient</Label>
+                    <div className='field-body'>
+                        <Field>
+                            <Control>
+                                <Input placeholder='Title' name='recipientTitle' color='primary' value={form.recipientTitle} onChange={onChange} />
+                            </Control>
+                        </Field>
+                        <Field>
+                            <Control>
+                                <Input placeholder='First Name' name='recipientFirst' color='primary' value={form.recipientFirst} onChange={onChange} />
+                            </Control>
+                        </Field>
+                        <Field>
+                            <Control>
+                                <Input placeholder='Last Name' name='recipientLast' color='primary' value={form.recipientLast} onChange={onChange} />
+                            </Control>
+                        </Field>
+                    </div>
+                </Field>
+                <Field className='is-horizontal'>
+                    <Label className='field-label'></Label>
+                    <div className='field-body'>
+                        <Field>
+                            <Control>
+                                <Textarea placeholder='Address' name='recipientAddress' color='primary' value={form.recipientAddress} onChange={onChange} />
+                            </Control>
+                        </Field>
+                    </div>
                 </Field>
 
-                <Field>
-                    <Label>Permanent Address</Label>
-                    <Control>
-                        <Input name='address' color='primary' className='is-size-5-tablet' value={form.address} onChange={onChange} />
-                    </Control>
+                <Field className='is-horizontal'>
+                    <Label className='field-label'>Subject</Label>
+                    <div className='field-body'>
+                        <Field>
+                            <Control>
+                                <Input placeholder='Subject' name='subject' color='primary' value={form.subject} onChange={onChange} />
+                            </Control>
+                        </Field>
+                    </div>
                 </Field>
 
-                <Field>
-                    <Label>Phone Number</Label>
-                    <Control>
-                        <Input name='phone' color='primary' className='is-size-5-tablet' value={form.phone} onChange={onChange} />
-                    </Control>
+                <Field className='is-horizontal'>
+                    <Label className='field-label'>Date</Label>
+                    <div className='field-body'>
+                        <Field>
+                            <Control>
+                                <Input placeholder='Date' name='date' color='primary' value={form.date} onChange={onChange} />
+                            </Control>
+                        </Field>
+                    </div>
                 </Field>
 
-                <Field>
-                    <Label>Recipient</Label>
-                    <Control>
-                        <Input name='recipient' color='primary' className='is-size-5-tablet' value={form.recipient} onChange={onChange} />
-                    </Control>
+                <Field className='is-horizontal'>
+                    <Label className='field-label'>Personalize</Label>
+                    <div className='field-body'>
+                        <Field>
+                            <Control>
+                                <Textarea placeholder='How did your background led to your interest in this job? Which aspect or part of the job intrigues you? Why?' name='interest' color='primary' value={form.interest} onChange={onChange} />
+                            </Control>
+                        </Field>
+                    </div>
                 </Field>
-                
-                <Field>
-                    <Label>Recipient Address</Label>
-                    <Control>
-                        <Textarea name='recipientAddress' color='primary' className='is-size-5-tablet' value={form.recipientAddress} onChange={onChange} />
-                    </Control>
-                </Field>
-
-                <Field>
-                    <Label>Subject</Label>
-                    <Control>
-                        <Input name='subject' color='primary' className='is-size-5-tablet' value={form.subject} onChange={onChange} />
-                    </Control>
-                </Field>
-
-                <Field>
-                    <Label>Date</Label>
-                    <Control>
-                        <Input name='date' color='primary' className='is-size-5-tablet' value={form.date} onChange={onChange} />
-                    </Control>
-                </Field>
-
-                <Field>
-                    <Label>Interest</Label>
-                    <Control>
-                        <Textarea name='interest' color='primary' className='is-size-5-tablet' value={form.interest} onChange={onChange} />
-                    </Control>
-                </Field>
-
-                <Field>
-                    <Label>Skills</Label>
-                    <Control>
-                        <Textarea name='skills' color='primary' className='is-size-5-tablet' value={form.skills} onChange={onChange} />
-                    </Control>
+                <Field className='is-horizontal'>
+                    <Label className='field-label'></Label>
+                    <div className='field-body'>
+                        <Field>
+                            <Control>
+                                <Textarea placeholder='What skills do you have that make you qualify for the job?' name='skills' color='primary' value={form.skills} onChange={onChange} />
+                            </Control>
+                        </Field>
+                    </div>
                 </Field>
 
                 <Field kind='group'>
                     <Button color='primary' className='is-size-5-tablet' onClick={handleSubmit} renderAs={Link} to='/reader'>Convert</Button>
                 </Field>
             </ArticleForm>
-            
+
             <Footer></Footer>
         </Hero>
     )
