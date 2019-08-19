@@ -7,7 +7,7 @@ const Form = ({ children }) => {
     return (
         <Section>
             <Container>
-                <Heading size={1} className='has-text-centered'>LetterMake</Heading>
+                <Heading size={1} className='has-text-centered' style={{ marginBottom: '4rem' }}>LetterMake</Heading>
                 {children}
             </Container>
         </Section>
