@@ -3,16 +3,16 @@ import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 
 const Template = ({ content }) => {
     return (
-        <Document title={`${content.recipient} Cover Letter`}>
+        <Document title={`${content.recipientLast} Cover Letter`}>
             <Page style={styles.body} size='LETTER'>
                 <View style={styles.p}>
-                    <Text>{content.author}</Text>
+                    <Text>{content.authorFirst} {content.authorLast}</Text>
                     <Text>{content.address}</Text>
                     <Text>{content.email}</Text>
                     <Text>Cell: {content.phone}</Text>
                 </View>
                 <View style={styles.p}>
-                    <Text>{content.recipient}</Text>
+                    <Text>{content.recipientTitle} {content.recipientFirst} {content.recipientLast}</Text>
                     <Text>{content.recipientAddress}</Text>
                 </View>
                 <View style={styles.p}>
@@ -22,11 +22,11 @@ const Template = ({ content }) => {
                     <Text>{content.date}</Text>
                 </View>
                 <View style={styles.p}>
-                    <Text>Dear {content.recipient},</Text>
+                    <Text>Dear {content.recipientTitle} {content.recipientLast},</Text>
                 </View>
                 <View style={styles.p}>
                     <Text>
-                        Hi my name is {content.author}. {content.interest}
+                        My name is {content.authorFirst}. {content.interest}
                     </Text>
                 </View>
                 <View style={styles.p}>
@@ -46,7 +46,7 @@ const Template = ({ content }) => {
                     <Text>Sincerely,</Text>
                 </View>
                 <View style={styles.p}>
-                    <Text>{content.author}</Text>
+                    <Text>{content.authorFirst} {content.authorLast}</Text>
                 </View>
             </Page>
         </Document>
